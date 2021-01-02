@@ -1,0 +1,47 @@
+// https://www.w3schools.com/css/css_intro.asp 
+// .scss files are basically plain .css files, with a slight twist:
+// note that the nesting structure does have meaning!
+// http://thesassway.com/beginner/the-inception-rule
+
+.board-container {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 2px solid red;
+
+    .board {
+        transition: 0.5s opacity ease;
+        align-self: center;
+        justify-content: center;
+        display: flex;
+
+        .board-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .board-warning {
+            color: white;
+            align-self: center;
+        }
+
+    }
+
+    .drag-target {
+        z-index: 1;
+        align-self: center;
+        padding: 10px;
+        margin-right: 50px;
+
+        .drag-hand {
+            pointer-events: none;
+            align-self: center;
+        }
+
+    }
+
+}
